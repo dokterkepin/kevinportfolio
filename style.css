@@ -1,0 +1,657 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap");
+
+:root{
+    --blue: #1595CD;
+    --dark-blue: rgb(62, 94, 171);
+    --purple: rgb(71, 50, 143);
+    --dark-purple: rgb(124, 55, 148);
+    --white: #FFFFFFFF;
+    --black: #000000FF;
+    --border-bold: 4px solid var(--dark-purple);
+    --border-light: 2px solid var(--dark-purple);
+}
+
+*{
+    font-family: "Rubik", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-transform: capitalize;
+    color: var(--black);
+    text-decoration: none;
+}
+
+*::selection{
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar{
+    height: 5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track{
+    background-color: transparent;
+
+}
+
+*::-webkit-scrollbar-thumb{
+    background-color: var(--blue);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    overflow: hidden;
+    transition: 0.2s linear !important;
+}
+
+body.active{
+    padding-left: 35rem;
+    
+}
+
+section{
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    text-align: center;
+}
+
+.button{
+    display: inline-block;
+    border: var(--border-light);
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+    transition: 0.2s linear !important;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--dark-blue);
+    border-color: var(--white);
+    color: white;
+}
+
+.message{
+    position: sticky;
+    top: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: var(--dark-purple);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+}
+
+.message span, i{
+    color: var(--white);
+    font-size: 2rem;
+}
+
+.message i{
+    cursor: pointer;
+}
+
+[data-aos] {
+    pointer-events: none;
+  }
+  .aos-animate {
+    pointer-events: auto;
+  }
+  .aos-init[data-aos][data-aos].aos-animate {
+    transform: unset;
+  }
+/* Header Style Start*/
+.header{
+    display: flex;
+    flex-flow: column;
+    position: fixed;
+    top: 0;
+    left: -35rem;
+    height: 100vh;
+    width: 35rem;
+    background-color: var(--white);
+    padding: 2rem;
+    justify-content: space-around;
+    text-align: center;
+    border-right: var(--border-bold);
+    transition: 0.2s linear !important;
+}
+
+.header.active{
+    left: 0;
+}
+
+.logo{
+    border-bottom: var(--border-bold);
+    font-size: 5rem;
+    text-align: center;
+    font-weight: bolder;
+    text-transform: uppercase;
+    width: 28rem;
+    margin: 0 auto;
+    color: var(--purple);
+}
+
+.navbar a{
+    display: block;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    transition: 0.2s linear !important;
+}
+
+.media a{
+    font-size: 3rem;
+    transition: 0.6s linear !important;
+    margin: 0px 1rem;
+    padding: 1rem;
+    
+}
+
+.header .navbar a.active,
+.header .navbar a:hover{
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.header .media a:hover{
+    transform: rotate(360deg);
+
+}
+
+#menu{
+    position: absolute;
+    top: 0;
+    right: -5rem;
+    vertical-align: center;
+    width: 5rem;
+    background-color: var(--dark-purple);
+    padding: 1rem;
+    font-size: 2.5rem;
+    height: 4.5rem;
+    color: var(--white);
+    cursor: pointer;
+}
+/* Header Style End*/
+
+/* Home Style Start */
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    min-height: 80vh;
+    flex-wrap: wrap;
+}
+
+.home .image{
+    flex: 1 1 40rem;
+}
+
+.home .image img{
+    width: 50rem;
+    border: var(--border-bold);
+    padding: 1.5rem;
+}
+
+.content{
+    flex: 1 1 40rem;
+}
+
+.content h3{
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: var(--dark-blue);
+    margin-bottom: 0.5rem;
+}
+
+.content span{
+    padding: 1rem 2rem;
+    font-size: 2.5rem;
+    display: inline-block;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    margin: 1rem 0;
+}
+
+.content p{
+    font-size: 1.7rem;
+    line-height: 2rem;
+    padding: 1rem 0;
+}
+/* Home Style End */
+
+/* About Style Start*/
+.about .heading{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    margin: 3rem auto;
+    border-bottom: var(--border-bold);
+    width: 25rem;
+    text-align: center;
+}
+
+.about .biography{
+    width: 100%;
+    margin: auto;
+}
+
+.about .biography p{
+    max-width: 70rem;
+    line-height: 2rem;
+    font-size: 1.7rem;
+    margin: auto;
+}
+
+.about .biography .bio{
+    margin: 1rem auto;
+    font-size: 1.5rem;
+    gap: 1.2rem;
+}
+
+.biography span{
+    color: var(--white);
+    font-size: 6.5;
+    text-transform: uppercase;
+}
+
+.biography .bio h3{
+    padding: 1.5rem;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    display: inline-block;
+    margin: 1rem;
+    word-break: break-all;
+    font-size: 2.5rem;
+}
+
+.biography .bio h3 span{
+    font-weight: lighter;
+}
+
+.about .skills .heading{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    margin: 3rem auto;
+    border-bottom: var(--border-bold);
+    width: 19rem;
+    text-align: center;
+}
+
+.about .skills .progress{
+    margin-top: 1rem;
+}
+
+.about .skills .progress .studied{
+    margin: 1rem auto;
+    border: var(--border-bold);
+    max-width: 70rem;
+    padding: 1rem;
+}
+
+.about .skills .progress .studied h3{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--purple);
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+
+.about .skills .progress .studied span{
+    font-weight: normal;
+    color: var(--white);
+}
+
+.about .skills .progress .studied:nth-child(1) h3{
+    width: 95%;
+}
+
+.about .skills .progress .studied:nth-child(2) h3{
+    width: 85%;
+}
+
+.about .skills .progress .studied:nth-child(3) h3{
+    width: 80%;
+}
+
+.about .skills .progress .studied:nth-child(4) h3{
+    width: 75%;
+}
+
+.about .edu-exp .heading{
+    font-size: 5rem;
+    margin: 3rem auto;
+    color: var(--dark-blue);
+    border-bottom: var(--border-bold);
+    width: 51%;
+}
+
+.about .edu-exp .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    
+}
+
+.edu-exp .row .box-countainer{
+    width: 40rem;
+}
+
+.edu-exp .row .box-countainer *{
+    margin-bottom: 1rem;
+    color: var(--white);
+
+}
+
+.edu-exp .box-countainer .title{
+    padding: 1.5rem;
+    font-size: 2rem;
+    color: var(--white);
+    background-color: var(--purple);
+}
+
+.edu-exp .box-countainer .box {
+    text-align: left;
+    padding: 1.5rem;
+    background-color: var(--dark-blue);
+    line-height: 2.5rem;
+}
+
+.edu-exp .box-countainer .box span{
+    font-size: 1.5rem;
+}
+.edu-exp .box-countainer .box h3{
+    font-size: 2rem;
+}
+
+.edu-exp .box-countainer .box p{
+    line-height: 1.7rem;
+    font-size: 1.2rem;
+}
+/* About Style End */
+
+/* Service Style Start */
+.service .heading{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    margin: 3rem auto;
+    border-bottom: var(--border-bold);
+    width: 19rem;
+    text-align: center;
+}
+
+.service .box-countainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    
+}
+
+.service .box-countainer .box{
+    width: 40rem;
+    padding: 1.5rem;
+    background-color: var(--dark-blue);
+    transition: 0.2s linear !important;
+}
+
+.service .box-countainer .box i{
+    font-size: 4rem;
+    color: var(--white);
+    margin-bottom: 2rem;
+    
+}
+
+.service .box-countainer .box h3{
+    font-size: 2rem;
+    padding: 0.5rem;
+    margin: 1rem 0;
+    color: var(--dark-blue);
+    background-color: var(--white);
+}
+
+.service .box-countainer .box p{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: var(--white);
+}
+
+.service .box-countainer .box:hover{
+    background-color: var(--dark-purple);
+}
+
+.service .box-countainer .box:hover h3{
+    color: var(--dark-purple);
+}
+/* Service Style End */
+
+/* Portfolio Style Start */
+.portfolio .heading{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    margin: 3rem auto;
+    border-bottom: var(--border-bold);
+    width: 22rem;
+    text-align: center;
+}
+
+.portfolio .box-countainer{
+    display: flex;
+    flex-wrap: wrap;
+    place-items: center;
+    justify-content: center;
+    gap: 3rem;
+}
+
+
+.portfolio .box{
+    box-shadow: 1px 1px 20px rgba(124, 55, 148, 0.5);
+    width: 30rem;
+    padding: 3rem;
+    transition: 0.2s linear !important;
+}
+
+.portfolio .box img{
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+
+.portfolio .box h3, span{
+    display: block;
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    color: var(--dark-purple);
+}
+
+.portfolio .box span{
+    color: var(--dark-purple);
+}
+
+.portfolio .box:hover{
+    transform: scale(0.9);
+    box-shadow: 1px 1px 20px 5px rgba(62, 94, 171, 0.7);
+}
+
+.portfolio .box:hover h3{
+    color: var(--dark-blue);
+}
+
+.portfolio .box:hover span{
+    color: var(--dark-blue);
+}
+/* Portfolio Style End */
+
+/* Contact Style Start */
+.contact .heading{
+    color: var(--dark-blue);
+    font-size: 5rem;
+    margin: 3rem auto;
+    border-bottom: var(--border-bold);
+    width: 20rem;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 70rem;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: column;
+    gap: 2rem;
+}
+
+.contact form .flex{
+    display: flex;
+    gap: 2rem;
+    
+}
+
+.contact form .box{
+    border: var(--border-light);
+    padding: 1rem;
+    font-size: 2rem;
+    width: 100%;
+    text-transform: none;
+}
+
+.contact form textarea{
+    height: 20rem;
+    resize: none;
+}
+
+.contact form .submit{
+    width: 15rem;
+    padding: 1.3rem;
+    margin: auto;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    transition: 0.2s linear !important;
+}
+
+.contact form .submit:hover{
+    transform: scale(1.1);
+    background-color: var(--dark-purple);
+}
+
+.contact .box-container{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin: 3rem auto;
+    
+}
+
+.contact .box-container .box{
+    padding: 2rem;
+    background-color: var(--dark-blue);
+    width: 30rem;
+    text-align: center;
+}
+
+.contact .box-container .box i{
+    font-size: 3rem;
+    color: var(--dark-blue);
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.contact .box-container .box h3{
+    font-size: 2rem;
+    color: var(--white);
+    margin: 1rem auto;
+}
+
+.contact .box-container .box p{
+    font-size: 1.5rem;
+    color: var(--white);
+}
+/* Contact Style End */
+
+.credit{
+    text-align: center;
+    background-color: var(--dark-purple);
+    padding: 3rem;
+    font-size: 2rem;
+    color: var(--white);
+}
+
+.credit span{
+    color: var(--white);
+    display: inline;
+    font-size: 2rem;
+    font-weight: bold;
+
+}
+
+/* Responsive Breakpoint  */
+@media(max-width: 991px){
+    html{
+        font-size: 55%;
+    }
+
+    body.active{
+        padding-left: 0;
+    }
+
+    .home{
+        margin-top: 3rem;
+    }
+
+    .about .edu-exp .heading{
+        width: 80%;
+    }
+    
+}
+
+@media(max-width: 450px){
+    html{
+        font-size: 50%;
+    }
+
+    .header.active{
+        padding-top: 7rem;
+    }
+
+    #menu.fa-times{
+        right: 0;
+    }
+
+    .home .image img{
+        width: 100%;
+        height: 100%;
+        gap: 1rem;
+    }
+
+    .biography span{
+        font-size: 2rem;
+    }
+
+    .biography .bio h3{
+        font-size: 2rem;
+    }
+
+    .about .edu-exp .heading{
+        width: 100%;
+    }
+
+    .contact form .flex{
+        flex-flow: column;
+        
+    }
+
+}
